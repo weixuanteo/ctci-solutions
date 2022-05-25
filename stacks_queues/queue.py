@@ -3,7 +3,7 @@
 from singly_linked_list import SinglyLinkedList
 from node import Node
 
-class Queue:
+class MyQueue:
     def __init__(self):
         self.queue = SinglyLinkedList()
     

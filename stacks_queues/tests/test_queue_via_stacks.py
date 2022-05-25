@@ -1,8 +1,8 @@
 import unittest
 
-from queue import MyQueue
+from queue_via_stacks import MyQueue
 
-class TestQueue(unittest.TestCase):
+class TestMyQueue(unittest.TestCase):
     def setUp(self):
         self.queue = MyQueue()
 
