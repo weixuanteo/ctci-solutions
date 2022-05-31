@@ -25,3 +25,17 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertFalse(self.bst.contains(0))
         self.assertFalse(self.bst.contains(-1))
         self.assertFalse(self.bst.contains(10))
+
+    def test_search(self):
+        self.assertEqual(self.bst.search(5).val, 5)
+        self.assertEqual(self.bst.search(3).val, 3)
+        self.assertEqual(self.bst.search(7).val, 7)
+        self.assertEqual(self.bst.search(2).val, 2)
+        self.assertEqual(self.bst.search(4).val, 4)
+        self.assertEqual(self.bst.search(6).val, 6)
+        self.assertEqual(self.bst.search(8).val, 8)
+        self.assertEqual(self.bst.search(1), None)
+        self.assertEqual(self.bst.search(9), None)
+        self.assertEqual(self.bst.search(0), None)
+        self.assertEqual(self.bst.search(-1), None)
+        self.assertEqual(self.bst.search(10), None)

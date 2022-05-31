@@ -26,13 +26,22 @@ class BinarySearchTree:
         if self.root is None:
             return False
         else:
+            result = self._search_bst(value, self.root)
+            if result is None:
+                return None
+            return value == result.val
+    
+    def search(self, value) -> TreeNode:
+        if self.root is None:
+            return None
+        else:
             return self._search_bst(value, self.root)
     
     def _search_bst(self, value, root) -> bool:
         if root is None:
-            return False
+            return None
         elif root.val == value:
-            return True
+            return root
         elif value < root.val:
             return self._search_bst(value, root.left)
         else:
