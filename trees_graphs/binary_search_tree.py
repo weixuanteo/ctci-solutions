@@ -46,3 +46,32 @@ class BinarySearchTree:
             return self._search_bst(value, root.left)
         else:
             return self._search_bst(value, root.right)
+    
+    def print_tree(self):
+        # print binary tree by levels
+        if self.root is None:
+            return
+        queue = [self.root]
+        while len(queue) > 0:
+            node = queue.pop(0)
+            print(node.val, end=" ")
+            if node.left is not None:
+                queue.append(node.left)
+            if node.right is not None:
+                queue.append(node.right)
+        print()
+
+    def get_structure_by_levels(self) -> list:
+        # print binary tree by levels
+        if self.root is None:
+            return []
+        queue = [self.root]
+        result = []
+        while len(queue) > 0:
+            node = queue.pop(0)
+            result.append(node.val)
+            if node.left is not None:
+                queue.append(node.left)
+            if node.right is not None:
+                queue.append(node.right)
+        return result
