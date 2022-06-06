@@ -19,22 +19,16 @@ def construct_minimal_tree(elements: list[int]) -> BinarySearchTree:
     if len(elements) == 1:
         tree.add(elements[0])
         return tree
-    mid = len(elements) // 2
-    tree.add(elements[mid])
-    if mid > 0:
-        construct_tree_with_remaining_elements(tree, elements[:mid])
-    if mid < len(elements) - 1:
-        construct_tree_with_remaining_elements(tree, elements[mid+1:])
+    add_elements_to_tree(tree, elements)
     return tree
 
-def construct_tree_with_remaining_elements(tree, elements):
+def add_elements_to_tree(tree, elements):
     mid = len(elements) // 2
     tree.add(elements[mid])
     if mid > 0:
-        construct_tree_with_remaining_elements(tree, elements[:mid])
+        add_elements_to_tree(tree, elements[:mid])
     if mid < len(elements) - 1:
-        construct_tree_with_remaining_elements(tree, elements[mid+1:])
-    return
+        add_elements_to_tree(tree, elements[mid+1:])
 
 def main():
     elements = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
