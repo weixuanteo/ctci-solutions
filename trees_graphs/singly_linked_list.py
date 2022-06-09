@@ -38,3 +38,11 @@ class SinglyLinkedList:
         if self.is_empty():
             self.tail = None
         return head_node
+    
+    def to_list(self):
+        result = []
+        current = self.head
+        while current:
+            result.append(current.data)
+            current = current.next
+        return result
