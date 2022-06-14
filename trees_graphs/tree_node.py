@@ -3,6 +3,7 @@ class TreeNode:
         self.val = val
         self.left = None
         self.right = None
+        self.parent = None
     
     def __repr__(self):
         return str(self.val)
