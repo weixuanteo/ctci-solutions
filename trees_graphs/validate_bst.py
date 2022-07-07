@@ -3,10 +3,11 @@
 from tree_node import TreeNode
 
 def is_bst(root: TreeNode) -> bool:
-    if root is None:
+    return dfs(root, float('-inf'), float('inf'))
+
+def dfs(root: TreeNode, min: int, max: int) -> bool:
+    if not root:
         return True
-    if root.left and root.left.val > root.val:
+    if root.val <= min or root.val >= max:
         return False
-    if root.right and root.right.val < root.val:
-        return False
-    return is_bst(root.left) and is_bst(root.right)
+    return dfs(root.left, min, root.val) and dfs(root.right, root.val, max)
