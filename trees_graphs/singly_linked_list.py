@@ -1,5 +1,7 @@
 # Implementation of SinglyLinkedList class
 from node import Node
+
+
 class SinglyLinkedList:
     def __init__(self):
         self.head = None
@@ -38,7 +40,7 @@ class SinglyLinkedList:
         if self.is_empty():
             self.tail = None
         return head_node
-    
+
     def to_list(self):
         result = []
         current = self.head

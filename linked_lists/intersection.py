@@ -3,10 +3,12 @@
 from singly_linked_list import SinglyLinkedList
 from node import Node
 
+
 def advance_ptr(ptr: Node, n: int) -> Node:
     for _ in range(n):
         ptr = ptr.next
     return ptr
+
 
 def intersection(list_a: SinglyLinkedList, list_b: SinglyLinkedList) -> Node:
     a_current = list_a.head

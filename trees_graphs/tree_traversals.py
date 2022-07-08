@@ -2,8 +2,10 @@
 
 from tree_node import TreeNode
 
+
 def visit(node: TreeNode, result: list):
     result.append(node.val)
+
 
 def preorder(root: TreeNode, result: list) -> list:
     if root is None:
@@ -13,6 +15,7 @@ def preorder(root: TreeNode, result: list) -> list:
     preorder(root.right, result)
     return result
 
+
 def inorder(root: TreeNode, result: list) -> list:
     if root is None:
         return
@@ -20,6 +23,7 @@ def inorder(root: TreeNode, result: list) -> list:
     visit(root, result)
     inorder(root.right, result)
     return result
+
 
 def postorder(root: TreeNode, result: list) -> list:
     if root is None:

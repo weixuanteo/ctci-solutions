@@ -4,6 +4,7 @@
 
 from singly_linked_list import SinglyLinkedList
 
+
 def partition(linked_list: SinglyLinkedList, x: int) -> SinglyLinkedList:
     # Time: O(n), Space: O(n)
     current = linked_list.head

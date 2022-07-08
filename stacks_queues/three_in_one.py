@@ -1,12 +1,13 @@
 # Use a single array to implement three stacks
 
+
 class MultiStack:
     def __init__(self, num_of_stacks, stack_size):
         self.num_of_stacks = num_of_stacks
         self.stack_size = stack_size
         self.arr = [None] * (num_of_stacks * stack_size)
         self.sizes = [0] * num_of_stacks
-    
+
     def is_full(self, stack_num):
         return self.sizes[stack_num] == self.stack_size
 
@@ -20,7 +21,7 @@ class MultiStack:
         self.arr[self.index_of_top(stack_num)] = None
         self.sizes[stack_num] -= 1
         return value
-    
+
     def push(self, stack_num, value):
         if self.is_full(stack_num):
             raise Exception("Stack is full")

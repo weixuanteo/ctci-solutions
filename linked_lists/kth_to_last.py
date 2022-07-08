@@ -3,6 +3,7 @@
 
 from singly_linked_list import SinglyLinkedList
 
+
 def return_kth_to_last(linked_list: SinglyLinkedList, k: int) -> int:
     # Time complexity: O(n), Space complexity: O(k)
     stack = []
@@ -17,6 +18,7 @@ def return_kth_to_last(linked_list: SinglyLinkedList, k: int) -> int:
     if len(stack) != k:
         return None
     return stack[0].data
+
 
 def return_kth_to_last_ptr(linked_list: SinglyLinkedList, k: int) -> int:
     # Time complexity: O(n), Space complexity: O(1)

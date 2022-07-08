@@ -4,6 +4,7 @@
 from queue import MyQueue
 from graph import Vertex
 
+
 def is_route_between_nodes(start: Vertex, end: Vertex) -> bool:
     visited = set()
     queue = MyQueue()
