@@ -1,8 +1,9 @@
-# Design a stack, which, in addition to push and pop, has a function min which returns the minimum element? 
+# Design a stack, which, in addition to push and pop, has a function min which returns the minimum element?
 # Push, pop and min should all operate in O(1) time.
 
 from node_min import NodeMin
 from singly_linked_list import SinglyLinkedList
+
 
 class StackMin:
     def __init__(self):
@@ -18,7 +19,7 @@ class StackMin:
         new_node.min = self.min
         self.stack.add_to_head(new_node)
         self.size += 1
-    
+
     def pop(self) -> int:
         if self.is_empty():
             return None
@@ -32,9 +33,9 @@ class StackMin:
 
     def get_min(self) -> int:
         return self.min
-    
+
     def peek(self) -> int:
         return self.stack.head.data
-    
+
     def is_empty(self) -> bool:
-        return self.size == 0 
+        return self.size == 0

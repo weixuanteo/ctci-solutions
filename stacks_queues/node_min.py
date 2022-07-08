@@ -3,6 +3,6 @@ class NodeMin:
         self.data = data
         self.next = None
         self.min = min
-    
+
     def __str__(self):
         return str(self.data)

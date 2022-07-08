@@ -3,6 +3,7 @@
 
 from tree_node import TreeNode
 
+
 def find_successor(node: TreeNode) -> TreeNode:
     if node.right:
         return find_min(node.right)
@@ -11,10 +12,12 @@ def find_successor(node: TreeNode) -> TreeNode:
             node = node.parent
         return node.parent
 
+
 def find_min(node: TreeNode) -> TreeNode:
     while node.left:
         node = node.left
     return node
+
 
 def is_right_child(node: TreeNode) -> bool:
     return node.parent and node.parent.right == node
@@ -50,5 +53,6 @@ def main():
     successor = find_successor(root.right.right.right)
     print(successor)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
