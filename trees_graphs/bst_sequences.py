@@ -10,10 +10,12 @@
 
 from tree_node import TreeNode
 
+
 def all_sequences(root: TreeNode) -> list:
     if not root:
         return []
     return dfs(root)
+
 
 def dfs(root: TreeNode) -> list:
     if not root:
@@ -25,6 +27,7 @@ def dfs(root: TreeNode) -> list:
         for right in right_seqs:
             seqs = weave(left, right, [root.val], seqs)
     return seqs
+
 
 def weave(list1: list, list2: list, prefix: list, result: list) -> list[list]:
     if not list1 and not list2:
