@@ -1,6 +1,7 @@
 import unittest
 from sort_stack import SortStack
 
+
 class TestSortStack(unittest.TestCase):
     def setUp(self):
         self.stack = SortStack()
@@ -9,7 +10,7 @@ class TestSortStack(unittest.TestCase):
         self.stack.push(4)
         self.stack.push(2)
         self.stack.push(1)
-    
+
     def test_sort(self):
         self.stack.sort()
         self.assertEqual(self.stack.pop(), 1)

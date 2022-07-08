@@ -2,6 +2,7 @@ import unittest
 from check_balanced import is_balanced
 from tree_node import TreeNode
 
+
 class TestCheckBalanced(unittest.TestCase):
     def setUp(self):
         self.tree1 = TreeNode(1)

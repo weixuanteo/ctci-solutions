@@ -2,6 +2,7 @@ import unittest
 
 from stack import Stack
 
+
 class TestStack(unittest.TestCase):
     def setUp(self):
         self.stack = Stack()

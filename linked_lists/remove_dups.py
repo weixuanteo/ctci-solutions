@@ -1,6 +1,7 @@
 # Write code to remove duplicates from an unsorted linked list.
 from singly_linked_list import SinglyLinkedList
 
+
 def remove_dups(linked_list: SinglyLinkedList) -> SinglyLinkedList:
     # Time Complexity: O(n), Space: O(n)
     seen = set()

@@ -1,6 +1,7 @@
 import unittest
 from list_of_depths import *
 
+
 class TestListOfDepths(unittest.TestCase):
     def setUp(self):
         self.tree = TreeNode(1)
@@ -19,7 +20,7 @@ class TestListOfDepths(unittest.TestCase):
         self.assertEqual([r.val for r in result[1]], [2, 3])
         self.assertEqual([r.val for r in result[2]], [4, 5, 6, 7])
         self.assertEqual([r.val for r in result[3]], [8])
-    
+
     def test_create_level_linked_lists_recursive(self):
         result = []
         create_level_linked_lists_recursive(self.tree, result, 0)

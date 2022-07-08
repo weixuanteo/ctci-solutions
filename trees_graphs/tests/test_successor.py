@@ -2,6 +2,7 @@ import unittest
 from successor import find_successor
 from tree_node import TreeNode
 
+
 class TestSuccessor(unittest.TestCase):
     def setUp(self):
         self.tree1 = TreeNode(4)
@@ -22,7 +23,9 @@ class TestSuccessor(unittest.TestCase):
         self.tree1.right.right.right.left = TreeNode(9)
         self.tree1.right.right.right.left.parent = self.tree1.right.right.right
         self.tree1.right.right.right.left.left = TreeNode(8)
-        self.tree1.right.right.right.left.left.parent = self.tree1.right.right.right.left
+        self.tree1.right.right.right.left.left.parent = (
+            self.tree1.right.right.right.left
+        )
 
     def test_find_successor(self):
         self.assertEqual(find_successor(self.tree1.right).val, 7)

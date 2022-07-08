@@ -2,6 +2,7 @@ import unittest
 
 from queue_via_stacks import MyQueue
 
+
 class TestMyQueue(unittest.TestCase):
     def setUp(self):
         self.queue = MyQueue()

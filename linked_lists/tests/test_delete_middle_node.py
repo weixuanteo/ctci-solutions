@@ -2,6 +2,7 @@ import unittest
 from singly_linked_list import SinglyLinkedList
 from delete_middle_node import delete_middle_node
 
+
 class TestDeleteMiddleNode(unittest.TestCase):
     def setUp(self):
         self.list1 = SinglyLinkedList()
@@ -12,7 +13,6 @@ class TestDeleteMiddleNode(unittest.TestCase):
 
         self.list2 = SinglyLinkedList()
         self.list2.add_to_tail(1)
-
 
     def test_delete_middle_node(self):
         delete_middle_node(self.list1.head.next)

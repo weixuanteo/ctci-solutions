@@ -3,6 +3,7 @@ import unittest
 from singly_linked_list import SinglyLinkedList
 from partition import partition
 
+
 class TestPartition(unittest.TestCase):
     def setUp(self):
         self.list1 = SinglyLinkedList()
@@ -22,7 +23,6 @@ class TestPartition(unittest.TestCase):
         self.list2.add_to_tail(3)
         self.list2.add_to_tail(5)
 
-    
     def test_partition(self):
         self.assertEqual(self.print_list(partition(self.list1, 5)), "3-2-1-5-8-5-10")
         self.assertEqual(self.print_list(partition(self.list2, 4)), "3-3-3-5-5-5")

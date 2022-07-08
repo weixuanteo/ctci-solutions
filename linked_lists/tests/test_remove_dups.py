@@ -2,6 +2,7 @@ import unittest
 from singly_linked_list import SinglyLinkedList
 from remove_dups import remove_dups
 
+
 class TestRemoveDups(unittest.TestCase):
     def setUp(self):
         self.list1 = SinglyLinkedList()
@@ -9,7 +10,7 @@ class TestRemoveDups(unittest.TestCase):
         self.list1.add_to_head(2)
         self.list1.add_to_head(3)
         self.list1.add_to_head(4)
-        
+
         self.list2 = SinglyLinkedList()
         self.list2.add_to_tail(2)
         self.list2.add_to_tail(3)
@@ -26,7 +27,6 @@ class TestRemoveDups(unittest.TestCase):
         self.list4.add_to_head(1)
         self.list4.add_to_head(1)
         self.list4.add_to_head(1)
-
 
     def test_remove_dups(self):
         self.list1 = remove_dups(self.list1)

@@ -2,6 +2,7 @@ import unittest
 from validate_bst import is_bst
 from tree_node import TreeNode
 
+
 class TestValidateBST(unittest.TestCase):
     def setUp(self):
         self.tree1 = TreeNode(5)
@@ -29,7 +30,7 @@ class TestValidateBST(unittest.TestCase):
         self.tree5 = TreeNode(2)
         self.tree5.left = TreeNode(2)
         self.tree5.right = TreeNode(2)
-    
+
     def test_is_bst(self):
         self.assertTrue(is_bst(self.tree1))
         self.assertFalse(is_bst(self.tree2))

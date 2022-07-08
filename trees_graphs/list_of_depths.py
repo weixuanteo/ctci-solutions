@@ -1,8 +1,9 @@
-# Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth 
+# Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth
 # (e.g., if you have a tree with depth D, you'll have D linked lists).
 
 from singly_linked_list import SinglyLinkedList
 from tree_node import TreeNode
+
 
 def create_level_linked_lists(root: TreeNode) -> list[SinglyLinkedList]:
     result = []
@@ -23,7 +24,10 @@ def create_level_linked_lists(root: TreeNode) -> list[SinglyLinkedList]:
 
     return result
 
-def create_level_linked_lists_recursive(root: TreeNode, result: list[SinglyLinkedList], level: int) -> None:
+
+def create_level_linked_lists_recursive(
+    root: TreeNode, result: list[SinglyLinkedList], level: int
+) -> None:
     if not root:
         return
     if len(result) == level:
@@ -51,6 +55,7 @@ def main():
     create_level_linked_lists_recursive(tree, result, 0)
     for r in result:
         print(r.to_list())
+
 
 if __name__ == "__main__":
     main()

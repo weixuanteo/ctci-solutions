@@ -2,16 +2,17 @@ import unittest
 from route_between_nodes import is_route_between_nodes
 from graph import *
 
+
 class TestIsRouteBetweenNodes(unittest.TestCase):
     def setUp(self):
         self.graph = Graph()
-        a = Vertex('A')
-        b = Vertex('B')
-        c = Vertex('C')
-        d = Vertex('D')
-        e = Vertex('E')
-        f = Vertex('F')
-        g = Vertex('G')
+        a = Vertex("A")
+        b = Vertex("B")
+        c = Vertex("C")
+        d = Vertex("D")
+        e = Vertex("E")
+        f = Vertex("F")
+        g = Vertex("G")
         self.graph.add_vertex(a)
         self.graph.add_vertex(b)
         self.graph.add_vertex(c)
@@ -33,10 +34,10 @@ class TestIsRouteBetweenNodes(unittest.TestCase):
         # a -> g
 
     def test_is_route_between_nodes(self):
-        a = self.graph.get_vertex_by_value('A')
-        d = self.graph.get_vertex_by_value('D')
-        e = self.graph.get_vertex_by_value('E')
-        g = self.graph.get_vertex_by_value('G')
+        a = self.graph.get_vertex_by_value("A")
+        d = self.graph.get_vertex_by_value("D")
+        e = self.graph.get_vertex_by_value("E")
+        g = self.graph.get_vertex_by_value("G")
 
         self.assertTrue(is_route_between_nodes(a, d))
         self.assertTrue(is_route_between_nodes(a, e))
@@ -44,6 +45,3 @@ class TestIsRouteBetweenNodes(unittest.TestCase):
         self.assertTrue(is_route_between_nodes(d, e))
         self.assertFalse(is_route_between_nodes(d, g))
         self.assertFalse(is_route_between_nodes(e, g))
-        
-
-

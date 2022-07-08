@@ -1,6 +1,7 @@
 import unittest
 from graph import Graph
 
+
 class TestGraph(unittest.TestCase):
     def setUp(self):
         self.graph = Graph()
@@ -9,7 +10,7 @@ class TestGraph(unittest.TestCase):
         self.graph.add_vertex(3)
         self.graph.add_vertex(4)
         self.graph.add_vertex(5)
-    
+
     def setup_edges(self):
         one = self.graph.get_vertex_by_value(1)
         two = self.graph.get_vertex_by_value(2)
@@ -27,14 +28,14 @@ class TestGraph(unittest.TestCase):
         self.assertEqual(self.graph.vertices[2].value, 3)
         self.assertEqual(self.graph.vertices[3].value, 4)
         self.assertEqual(self.graph.vertices[4].value, 5)
-    
+
     def test_add_edge(self):
         self.setup_edges()
         self.assertEqual(self.graph.vertices[0].adj_list[0].value, 2)
         self.assertEqual(self.graph.vertices[1].adj_list[0].value, 3)
         self.assertEqual(self.graph.vertices[2].adj_list[0].value, 4)
         self.assertEqual(self.graph.vertices[3].adj_list[0].value, 5)
-    
+
     def test_is_adjacent(self):
         self.setup_edges()
         one = self.graph.get_vertex_by_value(1)
@@ -50,7 +51,7 @@ class TestGraph(unittest.TestCase):
         self.assertFalse(self.graph.is_adjacent(one, five))
         self.assertFalse(self.graph.is_adjacent(two, five))
         self.assertFalse(self.graph.is_adjacent(three, five))
-    
+
     def test_delete_edge(self):
         self.setup_edges()
         one = self.graph.get_vertex_by_value(1)
@@ -70,10 +71,10 @@ class TestGraph(unittest.TestCase):
 
     def test_delete_vertex(self):
         self.setup_edges()
-        one = self.graph.get_vertex_by_value(1)        
+        one = self.graph.get_vertex_by_value(1)
         self.graph.delete_vertex(one)
         self.assertIsNone(self.graph.get_vertex_by_value(1))
-    
+
     def test_is_empty(self):
         one = self.graph.get_vertex_by_value(1)
         two = self.graph.get_vertex_by_value(2)

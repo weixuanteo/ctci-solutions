@@ -2,6 +2,7 @@ import unittest
 
 from three_in_one import MultiStack
 
+
 class TestMultiStack(unittest.TestCase):
     def setUp(self):
         self.stack = MultiStack(3, 3)
@@ -26,7 +27,7 @@ class TestMultiStack(unittest.TestCase):
         self.assertEqual(self.stack.pop(0), None)
         self.assertEqual(self.stack.pop(1), None)
         self.assertEqual(self.stack.pop(2), None)
-    
+
     def test_is_empty(self):
         self.assertTrue(self.stack.is_empty(0))
         self.assertTrue(self.stack.is_empty(1))
@@ -37,7 +38,7 @@ class TestMultiStack(unittest.TestCase):
         self.assertFalse(self.stack.is_empty(0))
         self.assertFalse(self.stack.is_empty(1))
         self.assertFalse(self.stack.is_empty(2))
-    
+
     def test_is_full(self):
         self.assertFalse(self.stack.is_full(0))
         self.assertFalse(self.stack.is_full(1))

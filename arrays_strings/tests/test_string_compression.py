@@ -1,6 +1,7 @@
 import unittest
 from string_compression import compress_string
 
+
 class TestStringCompression(unittest.TestCase):
     def test_compress_string(self):
         self.assertEqual(compress_string("aabcccccaaa"), "a2b1c5a3")

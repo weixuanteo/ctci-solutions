@@ -1,13 +1,15 @@
 # Implement a method to perform basic string compression using the counts of repeated characters.
-# If the "compressed" string would not become smaller than the original string, your method should return the original string. 
+# If the "compressed" string would not become smaller than the original string, your method should return the original string.
 # You can assume the string has only uppercase and lowercase letters (a - z).
 
 
 def is_zero_or_one_char(string) -> bool:
     return len(string) <= 1
 
+
 def is_compressed_string_bigger(csize, osize) -> bool:
     return csize >= osize
+
 
 def compress_string(string) -> str:
     og_size = len(string)
@@ -24,7 +26,7 @@ def compress_string(string) -> str:
         return string
 
     for i in range(1, og_size):
-        prev_char = string[i-1]
+        prev_char = string[i - 1]
         if string[i] == prev_char:
             count += 1
         else:

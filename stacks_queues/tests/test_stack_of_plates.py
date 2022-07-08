@@ -2,10 +2,11 @@ import unittest
 
 from stack_of_plates import SetOfStacks
 
+
 class TestSetOfStacks(unittest.TestCase):
     def setUp(self):
         self.sos = SetOfStacks(3)
-    
+
     def test_push_pop(self):
         self.sos.push(1)
         self.sos.push(2)
@@ -18,7 +19,7 @@ class TestSetOfStacks(unittest.TestCase):
         self.assertEqual(self.sos.pop(), 2)
         self.assertEqual(self.sos.pop(), 1)
         self.assertEqual(self.sos.pop(), None)
-    
+
     def test_push_pop_peek(self):
         self.sos.push(1)
         self.sos.push(2)
@@ -34,7 +35,7 @@ class TestSetOfStacks(unittest.TestCase):
         self.assertEqual(self.sos.pop(), 1)
         self.assertEqual(self.sos.peek(), None)
         self.assertEqual(self.sos.pop(), None)
-    
+
     def test_pop_at(self):
         self.sos.push(1)
         self.sos.push(2)

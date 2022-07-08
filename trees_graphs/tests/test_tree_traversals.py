@@ -2,6 +2,7 @@ import unittest
 from tree_node import TreeNode
 from tree_traversals import preorder, inorder, postorder
 
+
 class TestTreeTraversals(unittest.TestCase):
     def setUp(self):
         self.root = TreeNode(1)

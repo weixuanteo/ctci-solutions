@@ -1,6 +1,7 @@
 import unittest
 from singly_linked_list import SinglyLinkedList
 
+
 class TestSinglyLinkedList(unittest.TestCase):
     def test_add_to_head(self):
         ll = SinglyLinkedList()

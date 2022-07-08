@@ -1,6 +1,7 @@
 import unittest
 from binary_search_tree import BinarySearchTree
 
+
 class TestBinarySearchTree(unittest.TestCase):
     def setUp(self):
         self.bst = BinarySearchTree()
@@ -11,7 +12,7 @@ class TestBinarySearchTree(unittest.TestCase):
         self.bst.add(4)
         self.bst.add(6)
         self.bst.add(8)
-        
+
     def test_contains(self):
         self.assertTrue(self.bst.contains(5))
         self.assertTrue(self.bst.contains(3))

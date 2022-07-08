@@ -2,6 +2,7 @@ import unittest
 from singly_linked_list import SinglyLinkedList
 from intersection import intersection
 
+
 class TestIntersection(unittest.TestCase):
     def setUp(self):
         self.list1 = SinglyLinkedList()

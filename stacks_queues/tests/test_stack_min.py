@@ -2,10 +2,11 @@ import unittest
 
 from stack_min import StackMin
 
+
 class TestStackMin(unittest.TestCase):
     def setUp(self):
         self.stack = StackMin()
-    
+
     def test_min(self):
         self.stack.push(5)
         self.stack.push(3)
