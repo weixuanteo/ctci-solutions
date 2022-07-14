@@ -3,6 +3,7 @@ import unittest
 from tree_node import TreeNode
 from check_subtree import is_subtree, is_same_tree
 
+
 class TestCheckSubtree(unittest.TestCase):
     def setUp(self):
         self.tree1 = TreeNode(1)
@@ -18,7 +19,6 @@ class TestCheckSubtree(unittest.TestCase):
 
         self.tree4 = TreeNode(2)
         self.tree4.left = TreeNode(2)
-
 
     def test_is_same_tree(self):
         self.assertTrue(is_same_tree(self.tree1, self.tree1))
